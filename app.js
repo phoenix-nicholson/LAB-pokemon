@@ -6,9 +6,9 @@ import pokemon from './pokemon.js';
 const pokeImg1 = document.getElementById('poke-img-1');
 const pokeImg2 = document.getElementById('poke-img-2');
 const pokeImg3 = document.getElementById('poke-img-3');
-const button = document.getElementById('select');
+const captureButton = document.getElementById('select');
 
-const generatePoke = ()=> {
+const encounterPokemon = ()=> {
   
     let randPoke1 = Math.floor(Math.random() * pokemon.length);
     let randPoke2 = Math.floor(Math.random() * pokemon.length);
@@ -34,10 +34,16 @@ const generatePoke = ()=> {
     pokeImg3.src = poke3.url_image;
 };
 
-generatePoke();
+encounterPokemon();
 
-button.addEventListener('click', ()=> {
-  
-    generatePoke();
+let totalPlays = 0;
+
+captureButton.addEventListener('click', ()=> {
+    if (totalPlays >= 10) {
+        window.location.href = './results/index.html';
+    } else {
+        totalPlays++;
+    }
+    encounterPokemon();
 });
     
