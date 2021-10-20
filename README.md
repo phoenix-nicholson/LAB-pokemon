@@ -28,6 +28,6 @@
 * findByID
 * getResult -- should get localStorage data
 * showPokemon('id') -- should increment shown pokemon 
-* pickPokemon -- should increment selecetd pokemon
+* pickPokemon('id') -- should increment selecetd pokemon
 
 
