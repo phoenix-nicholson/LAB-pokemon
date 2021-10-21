@@ -12,7 +12,7 @@ export function getPokedex(){
     return pokeDex;
 }
 
-export function setPokedex(id){
+export function encounterPokemon(id){
     const pokeDex = getPokedex();
     const dexItem = findById(id, pokeDex);
     if (dexItem){
@@ -23,4 +23,11 @@ export function setPokedex(id){
     }
     const dexString = JSON.stringify(pokeDex);
     localStorage.setItem('POKEDEX', dexString);
+}
+
+export function caughtPokemon(id){
+    let pokedex = getPokedex();
+    let caughtPokemon = findById(id, pokedex);
+    caughtPokemon.caught++;
+    localStorage.setItem('POKEDEX', JSON.strginify(pokedex));
 }

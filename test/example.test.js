@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import pokemon from '../Data/pokemon.js';
-import { findById, getPokedex, setPokedex } from '../utils.js';
+import { findById, getPokedex, encounterPokemon } from '../utils.js';
 const test = QUnit.test;
 
 test('findById shuld return poke info', (expect) => {
@@ -60,19 +60,35 @@ test('getPokedex should return poke info', (expect) => {
     expect.deepEqual(expected, actual);
 });
 
-test('setPokedex should increment the quantity of item in ID', (expect)=>{
+test('encounterPokemon should increment the quantity of encounters', (expect)=>{
     localStorage.removeItem('POKEDEX');
     const fakeDex = [
         { id: 1, pokemon: 'bulbasaur', encounter: 1, caught: 0 },
         { id: 5, pokemon: 'charmander', encounter: 0, caught: 0 }
     ];
     localStorage.setItem('POKEDEX', JSON.stringify(fakeDex));
-    setPokedex(1);
+    encounterPokemon(1);
     const pokedex = getPokedex();
     const expected = [
-        { 'id': 1, pokemon: 'bulbasaur', encounter: 2, caught: 0 },
-        { 'id': 5, pokemon: 'charmander', encounter: 0, caught: 0 }
+        { id: 1, pokemon: 'bulbasaur', encounter: 2, caught: 0 },
+        { id: 5, pokemon: 'charmander', encounter: 0, caught: 0 }
     ];
     expect.deepEqual(pokedex, expected);
 });
 
+test('encounterPokemon should add pokemon to pokedex if  not in pokedex already', (expect)=>{
+    localStorage.removeItem('POKEDEX');
+
+    const testPokedex = [];
+    localStorage.setItem('POKEDEX', JSON.stringify(testPokedex));
+    encounterPokemon(1);
+    const pokedex = getPokedex();
+    const expected = [ 
+        { id: 1, encounter: 1, caught: 0 }
+    ];
+    expect.deepEqual(pokedex, expected);
+});
+
+test('caughtPokemon should should increment amount of caught', (expect)=> {
+    localStorage.removeItem('POKEDEX');
+});

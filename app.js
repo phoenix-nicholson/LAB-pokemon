@@ -1,14 +1,15 @@
 // import functions and grab DOM elements
 import pokemon from './Data/pokemon.js';
-
+import { caughtPokemon, encounterPokemon } from './utils.js';
 // console.log(pokemon);
 
 const pokeImg1 = document.getElementById('poke-img-1');
 const pokeImg2 = document.getElementById('poke-img-2');
 const pokeImg3 = document.getElementById('poke-img-3');
+
 const captureButton = document.getElementById('select');
 
-const encounterPokemon = ()=> {
+const pokemonEncountered = ()=> {
   
     let randPoke1 = Math.floor(Math.random() * pokemon.length);
     let randPoke2 = Math.floor(Math.random() * pokemon.length);
@@ -34,9 +35,10 @@ const encounterPokemon = ()=> {
     pokeImg3.src = poke3.url_image;
 };
 
-encounterPokemon();
+pokemonEncountered();
 
 let totalPlays = 0;
+// encounterPokemon();
 
 captureButton.addEventListener('click', ()=> {
     if (totalPlays >= 10) {
@@ -44,6 +46,12 @@ captureButton.addEventListener('click', ()=> {
     } else {
         totalPlays++;
     }
-    encounterPokemon();
+
+    const caughtRadio = document.querySelector('input[type=radio]:checked');
+    const caughtId = caughtRadio.id;
+    console.log(caughtId);
+    caughtPokemon(caughtId);
+
+    pokemonEncountered();
 });
     
