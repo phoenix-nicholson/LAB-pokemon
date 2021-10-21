@@ -13,7 +13,7 @@ export function getPokedex(){
 }
 
 export function encounterPokemon(id){
-    const pokeDex = getPokedex();
+    let pokeDex = getPokedex();
     const dexItem = findById(id, pokeDex);
     if (dexItem){
         dexItem.encounter++;
@@ -28,6 +28,10 @@ export function encounterPokemon(id){
 export function caughtPokemon(id){
     let pokedex = getPokedex();
     let caughtPokemon = findById(id, pokedex);
+    // console.log(pokedex);
+    // console.log(caughtPokemon);
     caughtPokemon.caught++;
-    localStorage.setItem('POKEDEX', JSON.strginify(pokedex));
+
+    localStorage.setItem('POKEDEX', JSON.stringify(pokedex));
+
 }
