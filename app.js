@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import pokemon from './pokemon.js';
+import pokemon from './Data/pokemon.js';
 
 // console.log(pokemon);
 
