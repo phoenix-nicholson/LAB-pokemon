@@ -19,7 +19,7 @@ for (let item of pokeDex){
     header.textContent = pokemonCaught.pokemon;
 
     const resultsSpan1 = document.createElement('span');
-    resultsSpan1.textContent = `Encounter: ${item.encounter}`
+    resultsSpan1.textContent = `Encounters: ${item.encounter} `
     ;
     const resultsSpan2 = document.createElement('span');
     resultsSpan2.textContent = `Caught: ${item.caught}`;

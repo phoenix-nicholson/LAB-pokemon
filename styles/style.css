@@ -35,8 +35,8 @@ input[type=radio] {
     display: none;
 }
 input[type=radio]:checked + img {
-    border-top:5px solid red;
-    border-bottom:5px solid white;
+    border-top:10px solid red;
+    border-bottom:10px solid white;
     border-radius: 125px;
 }
 .wrap{
@@ -48,5 +48,11 @@ a{
     color:red;
     width: 200px;
     height: auto;
+}
+p{
+    font-family: 'Rampart One', cursive;
+    color: yellow;
+    font-size: 1rem;
+    
 }
 

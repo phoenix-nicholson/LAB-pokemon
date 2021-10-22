@@ -15,6 +15,7 @@ img{
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 50px;
 }
 h1{
     display: flex;
@@ -22,13 +23,19 @@ h1{
     text-align: center;
     font-family: 'Rampart One', cursive;
     font-size: 3rem;
-    
+    background-color: lightskyblue;
+    border-radius: 100px;
+    font-style: oblique;
+    color: yellow;
     /* background-image: url('../assets/pokemon-logo.png'); */
 }
 span{
     font-size: 1.5rem;
+    font-weight:bold;
+    color: maroon;
 }
 a{
+   
     text-align: center;
     width: 200px;
     height: auto;
@@ -36,9 +43,21 @@ a{
 .chart{ 
     background-color: pink;
     color:white;
-    
+    border-radius: 40px;
 }
 h2{
     font-family: 'Rampart One', cursive;
+    color: maroon;
 }
-
+p{
+    font-family: 'Rampart One', cursive;
+    color: maroon;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+#poke-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
