@@ -1,5 +1,5 @@
-export function findById(id, poke){
-    for (let item of poke){
+export function findById(id, items){
+    for (let item of items){
         if (item.id === id){
             return item;
         }
@@ -28,8 +28,7 @@ export function encounterPokemon(id){
 export function caughtPokemon(id){
     let pokedex = getPokedex();
     let caughtPokemon = findById(id, pokedex);
-    // console.log(pokedex);
-    // console.log(caughtPokemon);
+    
     caughtPokemon.caught++;
 
     localStorage.setItem('POKEDEX', JSON.stringify(pokedex));

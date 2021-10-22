@@ -45,22 +45,23 @@ const pokemonEncountered = ()=> {
 };
 
 pokemonEncountered();
-encounterPokemon();
+// encounterPokemon();
 let totalPlays = 0;
 
 captureButton.addEventListener('click', ()=> {
+    const caughtRadio = document.querySelector('input[type=radio]:checked');
+    const caughtId = Number(caughtRadio.value);
+
+    
+    if (caughtRadio){ 
+        // console.log(caughtId);
+        caughtPokemon(caughtId);
+        totalPlays++;
+    }
     if (totalPlays >= 10) {
         window.location.href = './results/index.html';
     } else {
-        totalPlays++;
+        pokemonEncountered();
     }
-
-    const caughtRadio = document.querySelector('input[type=radio]:checked');
-    if (caughtRadio){ 
-        const caughtId = Number(caughtRadio.value);
-    // console.log(caughtId);
-        caughtPokemon(caughtId);
-    }
-    pokemonEncountered();
 });
     
