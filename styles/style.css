@@ -27,7 +27,9 @@ img {
 }
 h2, h1 {
     text-align: center;
-    color: white;
+    color: yellow;
+    font-family: 'Rampart One', cursive;
+    font-size: 3rem;
 }
 input[type=radio] {
     display: none;
@@ -44,4 +46,7 @@ input[type=radio]:checked + img {
 }
 a{
     color:red;
+    width: 200px;
+    height: auto;
 }
+

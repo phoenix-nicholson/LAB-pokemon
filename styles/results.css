@@ -1,24 +1,44 @@
 body{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    background-image: url('../assets/pokedex3.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+   
 }
 img{
     width: 100px;
     height: auto;
-    background-color:   violet;
+    background-image: url('../assets/pokeball2.png');
     border-radius: 100px;
+    background-size: 100%;
 }
 #main{
+    background-image: url('../assets/background-poke.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
 }
 h1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Rampart One', cursive;
+    font-size: 3rem;
     
+    /* background-image: url('../assets/pokemon-logo.png'); */
 }
 span{
     font-size: 1.5rem;
 }
+a{
+    text-align: center;
+    width: 200px;
+    height: auto;
+}
+.chart{ 
+    background-color: pink;
+    color:white;
+    
+}
+h2{
+    font-family: 'Rampart One', cursive;
+}
+
