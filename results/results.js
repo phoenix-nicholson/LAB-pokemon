@@ -30,6 +30,7 @@ for (let item of pokeDex){
 
 const names = pokeDex.map((item)=>{
     const pokeChart = findById(item.id, poke);
+    
     return pokeChart.pokemon;
 });
 const caught = pokeDex.map(item=>item.caught);
