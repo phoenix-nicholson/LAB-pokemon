@@ -1,6 +1,5 @@
 body{
-    justify-content: center;
-   
+    justify-content: center;  
 }
 img{
     width: 100px;
@@ -44,6 +43,8 @@ a{
     background-color: pink;
     color:white;
     border-radius: 40px;
+    width: 100%;
+
 }
 h2{
     font-family: 'Rampart One', cursive;

@@ -34,13 +34,14 @@ const names = pokeDex.map((item)=>{
 });
 const caught = pokeDex.map(item=>item.caught);
 var ctx = document.getElementById('resultsChart').getContext('2d');
-console.log(ctx);
+// console.log(ctx);
+//eslint-disable-next-line no-undef
 new Chart(ctx, {
     type: 'bar',
     data: {
         labels: names,
         datasets: [{
-            label: '# of Times Picked',
+            label: '# of Times Caught',
             data: caught,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
